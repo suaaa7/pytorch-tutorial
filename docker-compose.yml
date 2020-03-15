@@ -1,0 +1,15 @@
+version: '3.3'
+services:
+  pytorch:
+    container_name: pytorch
+    build: .
+    tty: true
+    stdin_open: true
+    ipc: host
+    ports:
+      - "8889:8889"
+    volumes:
+      - .:/opt/pytorch
+    environment:
+      - JUPYTER_CONFIG_DIR=/opt/pytorch
+    working_dir: /opt/pytorch
