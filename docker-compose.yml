@@ -1,7 +1,8 @@
 version: '3.3'
 services:
   pytorch:
-    container_name: pytorch
+    container_name: mypytorch
+    image: mypytorch:1
     build: .
     tty: true
     stdin_open: true
